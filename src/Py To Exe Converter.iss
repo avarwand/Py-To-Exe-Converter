@@ -1,12 +1,12 @@
 #define MyAppName "Py To Exe Converter"
-#define MyAppVersion "2.0"
+#define MyAppVersion "2.1"
 #define MyAppPublisher "Avarwand"
-#define MyAppURL "https://github.com/payam-avarwand/Py-To-Exe-Converter"
-#define MyAppExeName "Py To Exe Converter 2.0 Portable.exe"
-#define MyAppIcon "D:\Payam Avarwand\My Repos\GitHub\Word-Books\Code\Avarwand Software Production\3- Py To Exe Converter\Visual\Py To Exe Converter.ico"
+#define MyAppURL "https://github.com/payam-avarwand/Py-To-Exe-Converter/releases/tag/Py2Exe"
+#define MyAppExeName "Py To Exe Converter 2.1 Portable.exe"
+#define MyAppIcon "D:\Payam Avarwand\My Repos\GitHub\Word-Books\Code\Avarwand Software Production\3- Py To Exe Converter\Visual\P2E Logo.ico"
 #define MyVbsLauncher "Py To Exe Converter_Launcher.vbs"
-#define MyAppIconName "Py To Exe Converter.ico"
-#define MyAppFileVersion "2.0.0.5"
+#define MyAppIconName "P2E Logo.ico"
+#define MyAppFileVersion "2.1.0.4"
 
 [Setup]
 AppId={{Py_To_Exe_Converter.com.yahoo@Avar_Payam}
@@ -39,11 +39,11 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "D:\Payam Avarwand\My Repos\GitHub\Avarwand\Software\Py-To-Exe Converter\installer\Py To Exe Converter 2.0 Portable\Py To Exe Converter 2.0 Portable.exe"; DestDir: "{app}\lib"; Flags: ignoreversion
+Source: "D:\Payam Avarwand\My Repos\GitHub\Avarwand\Software\Py-To-Exe Converter\installer\Py To Exe Converter 2.1 Portable\Py To Exe Converter 2.1 Portable.exe"; DestDir: "{app}\lib"; Flags: ignoreversion
 Source: "{#MyAppIcon}"; DestDir: "{app}\lib\_internal"; Flags: ignoreversion
 
 ; Install _internal under the lib folder
-Source: "D:\Payam Avarwand\My Repos\GitHub\Avarwand\Software\Py-To-Exe Converter\installer\Py To Exe Converter 2.0 Portable\_internal\*"; DestDir: "{app}\lib\_internal"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "D:\Payam Avarwand\My Repos\GitHub\Avarwand\Software\Py-To-Exe Converter\installer\Py To Exe Converter 2.1 Portable\_internal\*"; DestDir: "{app}\lib\_internal"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
 ; VBS launcher
@@ -78,11 +78,11 @@ begin
     SaveStringToFile(VbsPath, VbsContent, False);
 
     // make the script hide and read-only
-    Exec('cmd.exe', '/C attrib +h +r +s "' + ExpandConstant('{app}\lib\{#MyAppExeName}') + '"', '', SW_HIDE, ewWaitUntilTerminated, ResultCode);
-    // Protect all files in the lib folder
-    Exec('cmd.exe', '/C attrib +h +r +s "' + ExpandConstant('{app}\lib\*.*') + '" /S', '', SW_HIDE, ewWaitUntilTerminated, ResultCode);
+    Exec('cmd.exe', '/C attrib +h +r "' + ExpandConstant('{app}\lib\{#MyAppExeName}') + '"', '', SW_HIDE, ewWaitUntilTerminated, ResultCode);
+
+
     // Protect the lib folder itself
-    Exec('cmd.exe', '/C attrib +h +r +s "' + ExpandConstant('{app}\lib') + '"', '', SW_HIDE, ewWaitUntilTerminated, ResultCode);
+    Exec('cmd.exe', '/C attrib +h "' + ExpandConstant('{app}\lib') + '"', '', SW_HIDE, ewWaitUntilTerminated, ResultCode);
 
     // Check if VBS file was created
     if not FileExists(VbsPath) then
@@ -110,6 +110,3 @@ begin
     end;
   end;
 end;
-
-
-

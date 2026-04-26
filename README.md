@@ -76,11 +76,11 @@ You may freely use, modify, share, and distribute this software.
 
 ## Author
 
-**Payam Avarwand**  
+**Avarwand Software**  
 Created: 01 June 2025  
-Version 2.0 Enhanced: 01 December 2025  
+Version 2.1 Enhanced: 13 April 2026
 
-Email: payam_avar@yahoo.com  
+Email: avarwand@yahoo.com  
 GitHub Issues & Pull Requests welcome!
 
 ---
