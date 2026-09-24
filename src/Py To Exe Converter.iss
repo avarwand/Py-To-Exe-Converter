@@ -1,16 +1,16 @@
-#define MyAppName "Py2Exe Converter"
-#define MyAppVersion "2.1"
+#define MyAppName "PY 2 EXE Converter"
+#define MyAppVersion "2.2"
 #define MyAppPublisher "Avarwand"
 #define MyAppURL "https://github.com/avarwand/Py-To-Exe-Converter/releases/tag/Py2Exe"
-#define MyAppExeName "PyToExe Converter 2.1 Portable.exe"
+#define MyAppExeName "PY 2 EXE Converter 2.2 Portable.exe"
 #define MyAppIcon "D:\Payam Avarwand\My Repos\GitHub\Word-Books\Code\Avarwand Software Production\4- Py To Exe Converter\Visual\P2E.ico"
-#define MyVbsLauncher "Py2Exe Converter_Launcher.vbs"
+#define MyVbsLauncher "PY 2 EXE Converter_Launcher.vbs"
 #define MyAppIconName "P2E.ico"
-#define MyAppFileVersion "2.1.5.67"
+#define MyAppFileVersion "2.2.3.1"
 #define MyLicenseFile "D:\Payam Avarwand\My Repos\GitHub\Avarwand\Software\Py-To-Exe Converter\installer\LICENSE.txt"
 
 [Setup]
-AppId={{Py2Exe_Converter.com.yahoo@Avar_Payam}
+AppId={{PY_2_EXE_Converter.com.yahoo@Avar_Payam}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 AppVerName={#MyAppName} {#MyAppVersion}
@@ -22,7 +22,7 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={autopf}\Avarwand\{#MyAppName}
 DefaultGroupName={#MyAppName}
 UninstallDisplayIcon={app}\lib\{#MyAppIconName}
-OutputDir="D:\Payam Avarwand\My Repos\GitHub\Avarwand\Software\APC\installer"
+OutputDir="D:\Payam Avarwand\My Repos\GitHub\Avarwand\Software\Py-To-Exe Converter\installer"
 OutputBaseFilename={#MyAppName}-{#MyAppVersion}-Setup
 SetupIconFile={#MyAppIcon}
 LicenseFile={#MyLicenseFile}
@@ -41,11 +41,11 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "D:\Payam Avarwand\My Repos\GitHub\Avarwand\Software\Py-To-Exe Converter\installer\PyToExe Converter 2.1 Portable\PyToExe Converter 2.1 Portable.exe"; DestDir: "{app}\lib"; Flags: ignoreversion
+Source: "D:\Payam Avarwand\My Repos\GitHub\Avarwand\Software\Py-To-Exe Converter\installer\PY 2 EXE Converter 2.2 Portable\PY 2 EXE Converter 2.2 Portable.exe"; DestDir: "{app}\lib"; Flags: ignoreversion
 Source: "{#MyAppIcon}"; DestDir: "{app}\lib\_internal"; Flags: ignoreversion
 
 ; Install _internal under the lib folder
-Source: "D:\Payam Avarwand\My Repos\GitHub\Avarwand\Software\Py-To-Exe Converter\installer\PyToExe Converter 2.1 Portable\_internal\*"; DestDir: "{app}\lib\_internal"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "D:\Payam Avarwand\My Repos\GitHub\Avarwand\Software\Py-To-Exe Converter\installer\PY 2 EXE Converter 2.2 Portable\_internal\*"; DestDir: "{app}\lib\_internal"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
 ; VBS launcher
@@ -112,4 +112,7 @@ begin
     end;
   end;
 end;
+
+
+
 
