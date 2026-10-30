@@ -1,6 +1,6 @@
 <div align="center">
 
-# Avarwand Py To Exe Converter 2.2.4.1
+# Avarwand Py To Exe Converter 2.2.6.1
 
 </div>
 
